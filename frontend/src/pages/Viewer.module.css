@@ -1,0 +1,46 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #0f0f0f;
+}
+
+.header {
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid #2e2e2e;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.viewer {
+  flex: 1;
+  overflow: hidden;
+}
+
+.center {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error {
+  color: #f77;
+  font-size: 1rem;
+  background: #2a1010;
+  border: 1px solid #5a2020;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+}

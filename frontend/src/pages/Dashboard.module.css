@@ -1,0 +1,165 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 300px;
+  min-width: 260px;
+  background: #141414;
+  border-right: 1px solid #2e2e2e;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Mobile: sidebar becomes a top strip, viewer fills remaining height */
+@media (max-width: 640px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-width: unset;
+    height: auto;
+    max-height: 45vh;
+    border-right: none;
+    border-bottom: 1px solid #2e2e2e;
+  }
+}
+
+.sidebarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #2e2e2e;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.logoutBtn {
+  background: none;
+  border: 1px solid #444;
+  color: #aaa;
+  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+}
+
+.uploadArea {
+  padding: 1rem;
+  border-bottom: 1px solid #2e2e2e;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.uploadBtn {
+  background: #7eb8f7;
+  color: #0f0f0f;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.uploadBtn:disabled {
+  opacity: 0.6;
+}
+
+.hint {
+  font-size: 0.75rem;
+  color: #666;
+  padding: 0 1rem;
+}
+
+.fileList {
+  list-style: none;
+  overflow-y: auto;
+  flex: 1;
+  padding: 0.5rem 0;
+}
+
+.fileItem {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #1e1e1e;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.fileItem:hover {
+  background: #1e1e1e;
+}
+
+.fileItem.active {
+  background: #1e2a38;
+  border-left: 3px solid #7eb8f7;
+}
+
+.fileName {
+  font-size: 0.875rem;
+  word-break: break-all;
+  margin-bottom: 0.2rem;
+}
+
+.fileMeta {
+  font-size: 0.75rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.fileActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.shareBtn {
+  background: #1e3a2a;
+  border: 1px solid #2e6040;
+  color: #6fd89e;
+  border-radius: 5px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+}
+
+.deleteBtn {
+  background: #3a1e1e;
+  border: 1px solid #602e2e;
+  color: #f77;
+  border-radius: 5px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+}
+
+.viewer {
+  flex: 1;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.empty {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 1rem;
+}
+
+.error {
+  color: #f77;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  background: #2a1010;
+  margin: 0.5rem 1rem;
+  border-radius: 6px;
+}
