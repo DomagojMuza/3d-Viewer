@@ -1,6 +1,6 @@
 services:
   app:
-    image: domagojmuza/3d-viewer:latest
+    image: ghcr.io/domagojmuza/3d-viewer:latest
     ports:
       - "3000:3000"
     volumes:
